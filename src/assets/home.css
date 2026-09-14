@@ -1,0 +1,21 @@
+.home_section {
+    padding: 20px;
+    background-color: #f3ead9;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.home_section:hover {
+    background-color: #f0cf94;
+    transition: background-color 0.3s ease;
+}
+
+.news_item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
