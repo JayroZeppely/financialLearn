@@ -7,15 +7,26 @@
     justify-content: center;
 }
 
-.home_section:hover {
-    background-color: #f0cf94;
-    transition: background-color 0.3s ease;
-}
-
 .news_item {
     margin-bottom: 20px;
     padding: 10px;
+    padding-top: 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #e4d0ae;
+    justify-content: center;
+}
+
+.btn-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-item:hover {
+    background-color: #268b29;
+    transition: background-color 0.3s ease;
 }

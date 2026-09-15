@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   });
 });
 
-const news = require('./routes/news');
+const news = require('./routes/news.js');
 app.use('/news',  news)
 
 app.listen(port, () => {
