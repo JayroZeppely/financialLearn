@@ -12,6 +12,14 @@ type newsItem = {
     };
 }
 
+function convertDate(dateString: string): string {
+    return new Date(dateString).toLocaleDateString("fr-FR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+    });
+
+}
 
 function Home() {
 
@@ -37,7 +45,7 @@ function Home() {
                     news.map((item, index) => (
                         <div key={index} className="news_item">
                             <h4>{item.title}</h4>
-                            <p>Publié le {item.pubDate} par <strong>{item.source["#text"]}</strong></p>
+                            <p>Publié le {convertDate(item.pubDate)} par <strong>{item.source["#text"]}</strong></p>
                             <button className="btn-item" onClick={() => {window.location.href = item.source["@_url"];}}>En savoir plus</button>
                         </div>
                     ))

@@ -1,13 +1,143 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
 #title-site {
-     font-size: 36px;
-     color: #333;
-     text-align: center;
-     margin-top: 20px;
- }
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
 
 #subtitle {
-     font-size: 24px;
-     color: #666;
-     text-align: center;
-     margin-bottom: 20px;
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+    margin: 5px 0 10px;
+}
+
+.menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #032563;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   DRAWER
+   ========================= */
+
+.drawer {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 300px;
+    height: 100vh;
+
+    background-color: white;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    z-index: 1000;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+/* =========================
+   DRAWER HEADER
+   ========================= */
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.drawer-header h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.drawer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-nav a {
+    padding: 16px 20px;
+
+    color: #333;
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: background-color 0.2s ease;
+}
+
+.drawer-nav a:hover {
+    background-color: #f0f0f0;
 }
