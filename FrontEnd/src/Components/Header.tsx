@@ -45,8 +45,7 @@ const Header = () => {
 
                 <nav className="drawer-nav">
                     <a href="/">Accueil</a>
-                    <a href="/news">Actualités</a>
-                    <a href="/companies">Entreprises</a>
+                    <a href="/glossary">Glossaire</a>
                     <a href="/about">À propos</a>
                 </nav>
             </aside>

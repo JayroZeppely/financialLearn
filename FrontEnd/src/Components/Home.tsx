@@ -24,6 +24,7 @@ function convertDate(dateString: string): string {
 function Home() {
 
     const [news, setNews] = useState<newsItem[]>([]);
+    const [companies, setCompanies] = useState<any[]>([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/news')
@@ -37,6 +38,18 @@ function Home() {
             });;
         }, []);
     
+    useEffect(() => {
+        fetch('http://localhost:3000/compagnies')
+            .then(res => res.json())
+            .then(data => {
+                setCompanies(data);
+                console.log('Données des entreprises récupérées :', data);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données des entreprises :', error);
+            });
+    }, []);
+
     return (
         <div className="home">
             <section className="home_section">
@@ -51,6 +64,20 @@ function Home() {
                     ))
                 ) : (
                     <p>Aucune actualité disponible pour le moment.</p>
+                )}
+            </section>
+            <section className="home_section">
+                <h3>Performances des entreprises</h3>
+                {companies && companies.length > 0 ? (
+                    companies.map((company, index) => (
+                        <div key={index} className="company_item">
+                            <h4>{company.longName}</h4>
+                            <p>Prix : {company.price} {company.currency}</p>
+                            <p>Échange : {company.exchangeName}</p>
+                        </div>
+                    ))
+                ) : (
+                    <p>Aucune donnée disponible pour le moment.</p>
                 )}
             </section>
         </div>

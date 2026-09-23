@@ -3,7 +3,7 @@
     background-color: #f3ead9;
     border-radius: 10px;
     width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     justify-content: center;
 }
 
@@ -24,6 +24,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-item:hover {

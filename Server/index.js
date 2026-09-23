@@ -14,7 +14,10 @@ app.get('/', (req, res) => {
 });
 
 const news = require('./routes/news.js');
+const compagnies = require('./routes/compagnies.js');
+
 app.use('/news',  news)
+app.use('/compagnies', compagnies)
 
 app.listen(port, () => {
   console.log(`Serveur démarré sur le port ${port}`);
