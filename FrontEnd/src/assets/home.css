@@ -2,7 +2,8 @@
     padding: 20px;
     background-color: #f3ead9;
     border-radius: 10px;
-    width: 600px;
+    width: 700px;
+    min-width: 600px;
     margin: 20px auto;
     justify-content: center;
 }
@@ -15,6 +16,10 @@
     border-radius: 5px;
     background-color: #e4d0ae;
     justify-content: center;
+}
+
+.news_item h4 {
+    font-size: 1.2rem;
 }
 
 .btn-item {
@@ -30,4 +35,34 @@
 .btn-item:hover {
     background-color: #268b29;
     transition: background-color 0.3s ease;
+}
+
+.company_item {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e4d0ae;
+}
+
+.company_item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.company_infos {
+    display: flex;
+    flex-direction: row;
+    margin : 20px;
+    margin-top: 5px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
 }
