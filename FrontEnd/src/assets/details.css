@@ -1,0 +1,64 @@
+.details_company {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.details_section {
+    margin: 5px auto;
+    padding: 20px;
+    padding-top: 0px;
+    background-color: #f3ead9;
+    border-radius: 10px;
+    text-align: justify;
+    width: fit-content;
+}
+
+.details_section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.details_section p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.bourse_section {
+    margin: 5px 0;
+    padding: 20px;
+    padding-top: 0;
+    background-color: #f3ead9;
+    border-radius: 10px;
+    text-align: justify;
+    flex: 1;
+    min-width: 0;
+    width: 600px;
+    height: 400px;
+}
+
+/* Version mobile */
+@media (max-width: 880px) {
+    .details_company {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .details_section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bourse_section {
+        width: 100%;
+        box-sizing: border-box;
+        height: 350px;
+    }
+}

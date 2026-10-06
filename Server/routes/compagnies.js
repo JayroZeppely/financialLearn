@@ -65,15 +65,22 @@ router.get('/:companyName', async (req, res) => {
         const variation = price - previousClose;
         const variationPercent = (variation / previousClose) * 100;
 
+        const timestamps = data.chart.result[0].timestamp;
+        const dates = timestamps.map((timestamp) => {
+            const date = new Date(timestamp * 1000);
+            return date.toISOString().split('T')[0];
+        });
+
         res.json({
             symbol: symbol,
             longName: result.longName,
             price : price,
             currency: result.currency,
             exchangeName: result.exchangeName,
+            volume : result.regularMarketVolume,
             variation: variation,
             variationPercent: variationPercent,
-            timestamps : data.chart.result[0].timestamp,
+            dates : dates,
             prices : data.chart.result[0].indicators.quote[0].close
         });
 

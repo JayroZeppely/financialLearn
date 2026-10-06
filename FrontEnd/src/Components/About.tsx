@@ -3,7 +3,7 @@ import "../assets/about.css";
 function About() {
     return (
         <>
-        <section>
+        <section className="about_section">
             <h3>À propos de ce site</h3>
             <div className="about_item">
                 <h4>Qu'est ce que FinanceLearning ?</h4>
@@ -23,7 +23,7 @@ function About() {
             </div>
         </section>
 
-        <section>
+        <section className="about_section">
             <h3>L'architecture du site</h3>
             <p>
                 Comme évoqué dans la section précédente, le site est décomposé en deux parties :
@@ -32,7 +32,10 @@ function About() {
                     <li>Le <strong>BackEnd</strong>, qui est la partie serveur du site, développée avec Node.js et Express. C'est également depuis le back que je fais le traitement des données.</li>
                 </ul>
             </p>
-            <p>Ce projet est versionné sur mon dépôt GitHub.</p>
+            <p>Les données récupérées sont issues de sources financières fiables, comme <strong>Yahoo Finance</strong> et <strong>Google Finance</strong>.
+                Les données d'actualités sont récupérées depuis le flux RSS de Google Finance, tandis que les données des entreprises sont récupérées depuis l'API de Yahoo Finance.
+            </p>
+            <p>Ce projet est versionné sur mon dépôt GitHub et ne tourne pour le moment que sur un ordinateur en local.</p>
         </section>
         </>
     )

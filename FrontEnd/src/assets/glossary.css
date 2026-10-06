@@ -1,0 +1,16 @@
+.glossary_section {
+    margin: auto;
+    padding: 20px;
+    padding-top: 0px;
+    background-color: #f3ead9;
+    border-radius: 10px;
+    text-align: justify;
+    width: fit-content;
+}
+
+.glossary_subSection {
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #ccc;
+}
