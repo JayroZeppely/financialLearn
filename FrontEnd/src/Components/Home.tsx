@@ -71,11 +71,11 @@ function Home() {
                 {companies && companies.length > 0 ? (
                     companies.map((company, index) => (
                         <div key={index} className="company_item">
-                            <h4><a href={`details/${company.symbol}`}>{company.longName}</a></h4>
+                            <h4><a className="company_link" href={`details/${company.symbol}`}>{company.longName}</a></h4>
                             <div className="company_infos">
-                                <p><strong>Prix d'un titre : {company.price} (<span className={company.variationPercent >= 0 ? 'positive' : 'negative'}>{company.variationPercent.toFixed(2)}%</span>)</strong></p>
-                                <p><strong>Place boursière : {company.exchangeName}</strong></p>
-                                <p><strong>Monnaie : {company.currency}</strong></p>
+                                <p>Prix d'un titre : <strong>{company.price} (<span className={company.variationPercent >= 0 ? 'positive' : 'negative'}>{company.variationPercent.toFixed(2)}%</span>)</strong></p>
+                                <p>Place boursière : <strong>{company.exchangeName}</strong></p>
+                                <p>Monnaie : <strong>{company.currency}</strong></p>
                             </div>
                         </div>
                     ))

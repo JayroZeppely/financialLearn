@@ -11,6 +11,25 @@
 .glossary_subSection {
     padding: 10px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
+}
+
+.glossary_title {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.glossary_subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #424242;
+    margin-top: 20px;
+}
+
+.glossary_item h5 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }

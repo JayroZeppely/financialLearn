@@ -1,3 +1,10 @@
+.company_name {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0;
+}
+
 .details_company {
     display: flex;
     flex-direction: row;

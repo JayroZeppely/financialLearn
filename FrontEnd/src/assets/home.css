@@ -66,3 +66,15 @@
 .negative {
     color: red;
 }
+
+.company_link {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-decoration: none;
+    color: #464b50;
+}
+
+.company_link:hover {
+    color: #2165a8;
+    transition: color 0.3s ease;
+}

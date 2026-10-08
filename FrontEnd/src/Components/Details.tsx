@@ -59,13 +59,15 @@ function Details() {
 
     return (
         <>
-            <h3>{companyDetails?.longName}</h3>
+            <h3 className="company_name">{companyDetails?.longName}</h3>
             <div className="details_company">
                 <section className="details_section">
                     <h4>Informations sur l'entreprise</h4>
                     <p>Nom complet : {companyDetails?.longName}</p>
                     <p>Prix actuel de l'action : {companyDetails?.price} {companyDetails?.currency}</p>
-                    <p>Variation du prix depuis hier : {companyDetails?.variation.toFixed(2)} {companyDetails?.currency} ({companyDetails?.variationPercent.toFixed(2)}%)</p>
+                    <p>Variation du prix depuis hier : {companyDetails?.variation.toFixed(2)} {companyDetails?.currency} (<span className={companyDetails?.variationPercent >= 0 ? "positive" : "negative"}>
+                        {companyDetails?.variationPercent.toFixed(2)}%
+                    </span>)</p>
                     <p>Nombre de transactions aujourd'hui : {companyDetails?.volume}</p>
                 </section>
                 <section className="bourse_section">
